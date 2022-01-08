@@ -1,0 +1,7 @@
+{
+  "hooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+    "pre-commit": "npm run test:lint",
+    "pre-push": "npm run test:lint && npm run prettier:check && npm run test:unit"
+  }
+}

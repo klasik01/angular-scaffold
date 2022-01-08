@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Scaffold Angular",
+  "short_name": "scaffold-angular",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/assets/favicons/favicon.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

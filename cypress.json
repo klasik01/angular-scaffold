@@ -1,0 +1,26 @@
+{
+  "baseUrl": "http://localhost",
+  "chromeWebSecurity": false,
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "defaultCommandTimeout": 300000,
+  "pageLoadTimeout": 300000,
+  "fixturesFolder": "e2e/cypress/fixtures",
+  "integrationFolder": "e2e/features",
+  "pluginsFile": "e2e/cypress/plugins",
+  "screenshotsFolder": "e2e/cypress/screenshots",
+  "supportFile": "e2e/cypress/support",
+  "videosFolder": "e2e/cypress/videos",
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": "**/*.js",
+  "video": false,
+  "videoCompression": 24,
+  "videoUploadOnPasses": true,
+  "reporterOptions": {
+    "overwrite": false,
+    "showPassed": true,
+    "quiet": true,
+    "html": true,
+    "json": true
+  }
+}

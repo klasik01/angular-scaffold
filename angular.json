@@ -6,6 +6,10 @@
     "angular-scaffold": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -27,9 +31,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/material-icons/iconfont/material-icons.css",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles/helpers"
+              ]
+            },
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -94,13 +110,33 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles/helpers"
+              ]
+            },
+            "scripts": [],
+            "codeCoverageExclude": [
+              "src/**/*.mock.ts"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "angular-scaffold"
+  "defaultProject": "angular-scaffold",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

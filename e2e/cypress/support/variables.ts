@@ -1,0 +1,13 @@
+export const config = Cypress.config();
+export const BASE_URL = config.baseUrl || 'http://testapp';
+export const AUTH_URL = Cypress.env('AUTH_URL') || 'https://keycloak:8443';
+export const AUTH_REALM = Cypress.env('AUTH_REALM') || 'boilerplate-oauth2';
+export const AUTH_PATH = `auth/realms/${AUTH_REALM}/protocol/openid-connect/auth`;
+export const USER_PROFILE_URL = `${BASE_URL}/auth/oidc?info=json`;
+export const AUTH_REDIRECT_URL = ``;
+export const LOGOUT_PATH = `auth/realms/${AUTH_REALM}/protocol/openid-connect/logout`;
+export const DEFAULT_USERNAME = 'Fernand Marcel';
+export const DEFAULT_PASSWORD = 'test';
+export const SESSION_COOKIE_KEY = 'mod_auth_openidc_session';
+export const MOCK_URL = 'http://localhost:4300';
+export const CLIENT_ID = 'app_angular';

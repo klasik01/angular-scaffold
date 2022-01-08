@@ -1,0 +1,14 @@
+.storybook
+.vscode
+coverage
+Dockerfile*
+.git*
+.dockerignore
+*.md
+*.log
+*.yml
+LICENSE
+.prettier*
+.editorconfig
+coverage
+reports
